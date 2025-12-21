@@ -1,0 +1,26 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.app-header nav a {
+  margin-left: 1.5rem;
+  color: #555;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.app-header nav a:hover {
+  color: #000;
+}
