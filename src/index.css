@@ -1,17 +1,67 @@
-/* src/index.css - 设置全局简约样式 */
+/* src/index.css - 全局美化样式 */
+:root {
+  --font-sans: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-serif: 'Noto Serif SC', serif;
+  
+  --color-bg: #fcfaf2;
+  --color-text: #333333;
+  --color-accent: #3498db;
+  --color-border: #eaeaea;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fdfdfd;
-  color: #333;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
 }
 
 main {
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9; /* A slightly darker shade of the accent color */
+}
+
+.icp-beian {
+  margin-top: 0.5rem;
+}
+
+.icp-beian a {
+  color: #888;
+  text-decoration: none;
+}
+
+.icp-beian a:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

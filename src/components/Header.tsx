@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -8,9 +8,15 @@ const Header = () => {
         <Link to="/">拾光笔记</Link>
       </div>
       <nav>
-        <Link to="/">主页</Link>
-        <Link to="/articles">文章</Link>
-        <Link to="/about">关于</Link>
+        <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+          主页
+        </NavLink>
+        <NavLink to="/articles" className={({ isActive }) => (isActive ? 'active' : '')}>
+          文章
+        </NavLink>
+        <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>
+          关于
+        </NavLink>
       </nav>
     </header>
   );
